@@ -24,6 +24,7 @@ Coordinates=162,10,53,51
 
 [Button9]
 Coordinates=79,78,53,51
+Visible=True
 
 [Panel1]
 Coordinates=148,78,47,51
@@ -51,5 +52,9 @@ Coordinates=10,146,58,51
 Coordinates=282,78,53,51
 
 []
-Coordinates=403,1,82,33
+Coordinates=403,148,82,33
+
+[Button17]
+Coordinates=370,10,58,51
+Visible=True
 

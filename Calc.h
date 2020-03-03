@@ -29,6 +29,8 @@ __published: // Von der IDE verwaltete Komponenten
 	TButton *Button15;
 	TPanel *Panel1;
 	TButton *Button16;
+	TButton *Button17;
+	TButton *Button18;
 
 	void __fastcall Button6Click(TObject *Sender);
 	void __fastcall Button15Click(TObject *Sender);
@@ -46,13 +48,15 @@ __published: // Von der IDE verwaltete Komponenten
 	void __fastcall Button5Click(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button12Click(TObject *Sender);
+	void __fastcall Button17Click(TObject *Sender);
+    void __fastcall Button18Click(TObject *Sender);
 
 private: // Benutzer-Deklarationen
 public: // Benutzer-Deklarationen
 	__fastcall TForm1(TComponent* Owner);
 	void __fastcall calculate(String input);
 	bool __fastcall isOp(AnsiString input);
-	int __fastcall calcString();
+	double __fastcall calcString();
 };
 
 // ---------------------------------------------------------------------------
