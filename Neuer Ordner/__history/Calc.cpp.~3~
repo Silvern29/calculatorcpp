@@ -1,0 +1,30 @@
+// ---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Calc.h"
+#include <iostream>
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+TPanel *Panel1;
+
+// ---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
+
+}
+
+int main() {
+	char typed;
+	int sum = 0;
+	Panel1->Caption = sum;
+}
+
+int calculate(char typed) {
+
+}
+
+
+
