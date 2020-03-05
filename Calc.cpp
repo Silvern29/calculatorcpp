@@ -24,9 +24,9 @@ bool __fastcall TForm1::isOp(AnsiString input) {
 	return std::find(ops, ops + 4, input) != ops + 4;
 }
 
-int __fastcall TForm1::calcString() {
+double __fastcall TForm1::calcString() {
 	AnsiString str = Panel1->Caption;
-	int sum = 0;
+	double sum = 0;
 	String a = "";
 	String b = "";
 	String op = "";
@@ -48,22 +48,22 @@ int __fastcall TForm1::calcString() {
 	}
 
 	if (op == "+") {
-		sum = a.ToInt() + b.ToInt();
+		sum = a.ToDouble() + b.ToDouble();
 	}
 	else if (op == "-") {
-		sum = a.ToInt() - b.ToInt();
+		sum = a.ToDouble() - b.ToDouble();
 	}
 	else if (op == "*") {
-		sum = a.ToInt() * b.ToInt();
+		sum = a.ToDouble() * b.ToDouble();
 	}
 	else if (op == "/") {
-		if (b.ToInt() == 0) {
+		if (b.ToDouble() == 0) {
 			ShowMessage("Division by Zero");
 			Panel1->Caption = '0';
 			numOp = 0;
 		}
 		else {
-			sum = a.ToInt() / b.ToInt();
+			sum = a.ToDouble() / b.ToDouble();
 		}
 	}
 
@@ -183,5 +183,22 @@ void __fastcall TForm1::Button1Click(TObject * Sender) {
 void __fastcall TForm1::Button12Click(TObject * Sender) {
 	Panel1->Caption = TForm1::calcString();
 	numOp = 0;
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button17Click(TObject * Sender) {
+	TForm1::calculate(this->Button17->Caption);
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button18Click(TObject * Sender) {
+	AnsiString str = Panel1->Caption;
+
+	if(isOp(str[str.Length()])){
+		numOp = 0;
+	}
+	str.Delete(str.Length(), 1);
+	Panel1->Caption = str;
+	// TForm1::calculate(this->Button17->Caption);
 }
 // ---------------------------------------------------------------------------
